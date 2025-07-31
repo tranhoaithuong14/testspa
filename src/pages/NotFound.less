@@ -1,0 +1,45 @@
+@import '../styles/variables.less';
+
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+
+  .content {
+    h1 {
+      font-size: 6rem;
+      color: @primary-color;
+      margin-bottom: @spacing-md;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: @text-color;
+      margin-bottom: @spacing-md;
+    }
+
+    p {
+      color: @text-color-secondary;
+      font-size: @font-size-lg;
+      margin-bottom: @spacing-xl;
+    }
+
+    .home-link {
+      display: inline-block;
+      background-color: @primary-color;
+      color: white;
+      padding: @spacing-sm @spacing-lg;
+      border-radius: @border-radius;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: darken(@primary-color, 10%);
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import './variables.less';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: @font-size-base;
+}
+
+body {
+  font-family: @font-family;
+  color: @text-color;
+  background-color: @background-color;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: @primary-color;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: lighten(@primary-color, 10%);
+  }
+}
+
+.container {
+  max-width: @content-max-width;
+  margin: 0 auto;
+  padding: 0 @spacing-md;
+
+  @media (max-width: @screen-sm) {
+    padding: 0 @spacing-sm;
+  }
+}

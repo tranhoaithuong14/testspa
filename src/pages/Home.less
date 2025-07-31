@@ -1,0 +1,63 @@
+@import '../styles/variables.less';
+
+.home {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+
+  h1 {
+    color: @primary-color;
+    margin-bottom: @spacing-lg;
+    font-size: 2.5rem;
+  }
+
+  p {
+    margin-bottom: @spacing-md;
+    color: @text-color-secondary;
+    font-size: @font-size-lg;
+  }
+
+  ul {
+    text-align: left;
+    margin: @spacing-xl 0;
+    padding-left: @spacing-lg;
+
+    li {
+      margin-bottom: @spacing-xs;
+      color: @text-color;
+    }
+  }
+
+  .counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: @spacing-md;
+    margin-top: @spacing-xl;
+
+    button {
+      background-color: @primary-color;
+      color: white;
+      border: none;
+      border-radius: @border-radius;
+      padding: @spacing-xs @spacing-md;
+      font-size: @font-size-lg;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: darken(@primary-color, 10%);
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+
+    span {
+      font-size: @font-size-lg;
+      font-weight: 500;
+      min-width: 100px;
+    }
+  }
+}
